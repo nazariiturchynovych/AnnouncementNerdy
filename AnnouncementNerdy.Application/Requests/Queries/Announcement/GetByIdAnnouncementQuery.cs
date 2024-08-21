@@ -1,12 +1,13 @@
-using AnnouncementNerdy.Application.Repositories;
-using AnnouncementNerdy.Domain.Results;
-using FluentValidation;
-
 namespace AnnouncementNerdy.Application.Requests.Queries.Announcement;
 
-public record GetByIdAnnouncementQuery(string Id) : IRequest<CommonResult<AnnouncementNerdy.Domain.Entities.Announcement.Announcement>>;
+using Repositories;
+using Domain.Results;
+using FluentValidation;
+using AnnouncementNerdy.Domain.Entities.Announcement;
 
-public class GetByIdAnnouncementQueryHandler : IRequestHandler<GetByIdAnnouncementQuery, CommonResult>
+public record GetByIdAnnouncementQuery(string Id) : IRequest<CommonResult<Announcement>>;
+
+public class GetByIdAnnouncementQueryHandler : IRequestHandler<GetByIdAnnouncementQuery, CommonResult<Announcement>>
 {
     private readonly IAnnouncementRepository _announcementRepository;
 
@@ -15,13 +16,13 @@ public class GetByIdAnnouncementQueryHandler : IRequestHandler<GetByIdAnnounceme
         _announcementRepository = announcementRepository;
     }
     
-    public async Task<CommonResult> Handle(GetByIdAnnouncementQuery request, CancellationToken cancellationToken)
+    public async Task<CommonResult<Announcement>> Handle(GetByIdAnnouncementQuery request, CancellationToken cancellationToken)
     {
         var announcement = await _announcementRepository.GetByIdAsync(request.Id);
 
         if (announcement is null)
         {
-            return Failure("Entity does not exist");
+            return Failure<Announcement>("Entity does not exist");
         }
 
         return Success(announcement);

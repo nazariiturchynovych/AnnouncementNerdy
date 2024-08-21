@@ -1,5 +1,6 @@
 using AnnouncementNerdy.Application.Repositories;
 using AnnouncementNerdy.Domain.Entities.Announcement;
+using AnnouncementNerdy.Infrastructure.Helpers;
 using Nest;
 
 namespace AnnouncementNerdy.Infrastructure.Repositories;
@@ -13,7 +14,15 @@ public class AnnouncementRepository : IAnnouncementRepository
         _elasticClient = elasticClient;
     }
 
-    public async Task<Announcement?> GetByIdAsync(string id) => (await _elasticClient.GetAsync<Announcement>(id)).Source;
+    public async Task<Announcement?> GetByIdAsync(string id) 
+    {
+        var response = (await _elasticClient.GetAsync<Announcement>(id));
+
+        var announcement = response.Source;
+        announcement.Id = response.Id;
+
+        return announcement;
+    }
 
     public async Task<IEnumerable<Announcement>> GetListAsync()
     {
@@ -24,7 +33,7 @@ public class AnnouncementRepository : IAnnouncementRepository
                     x.CreatedDate))
         );
 
-        return result.Documents;
+        return ElasticMapHelper<Announcement>.MapElasticHitsToEntityWithIds(result.Hits);
     }
 
     public async Task<IEnumerable<Announcement>> GetSimilar(string id)
@@ -40,13 +49,13 @@ public class AnnouncementRepository : IAnnouncementRepository
         var result = await _elasticClient.SearchAsync<Announcement>(s => s.Query(query));
 
 
-        return result.Documents.ToList();
+        return ElasticMapHelper<Announcement>.MapElasticHitsToEntityWithIds(result.Hits);
     }
 
 
     public async Task<string> AddAsync(Announcement announcement)
     {
-        var indexName = nameof(Announcement).ToLower();
+        var indexName = nameof(Announcement).ToLower() + "s";
         var indexResponse = await _elasticClient.Indices.ExistsAsync(indexName);
 
         if (!indexResponse.Exists)

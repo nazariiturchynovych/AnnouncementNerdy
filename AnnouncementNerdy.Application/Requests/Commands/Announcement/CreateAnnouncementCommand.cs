@@ -6,9 +6,9 @@ using Domain.Results;
 using AnnouncementNerdy.Domain.Entities.Announcement;
 
 
-public record CreateAnnouncementCommand(string Title, string Description) : IRequest<CommonResult>;
+public record CreateAnnouncementCommand(string Title, string Description) : IRequest<CommonResult<string>>;
 
-public class CreateAnnouncementCommandHandler : IRequestHandler<CreateAnnouncementCommand, CommonResult>
+public class CreateAnnouncementCommandHandler : IRequestHandler<CreateAnnouncementCommand, CommonResult<string>>
 {
     private readonly IAnnouncementRepository _announcementRepository;
 
@@ -17,11 +17,11 @@ public class CreateAnnouncementCommandHandler : IRequestHandler<CreateAnnounceme
         _announcementRepository = announcementRepository;
     }
     
-    public async Task<CommonResult> Handle(CreateAnnouncementCommand request, CancellationToken cancellationToken)
+    public async Task<CommonResult<string>> Handle(CreateAnnouncementCommand request, CancellationToken cancellationToken)
     {
-        await _announcementRepository.AddAsync(new Announcement(request.Title, request.Description));
+       var id = await _announcementRepository.AddAsync(new Announcement(request.Title, request.Description));
 
-        return Success();
+        return Success(id);
     }
 }
 

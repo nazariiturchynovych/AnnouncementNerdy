@@ -1,12 +1,15 @@
-using AnnouncementNerdy.Application.Repositories;
-using AnnouncementNerdy.Domain.Results;
-using FluentValidation;
-
 namespace AnnouncementNerdy.Application.Requests.Queries.Announcement;
 
-public record GetSimilarAnnouncementsQuery(string Id) : IRequest<CommonResult<AnnouncementNerdy.Domain.Entities.Announcement.Announcement>>;
 
-public class GetSimilarAnnouncementsQueryHandler : IRequestHandler<GetSimilarAnnouncementsQuery, CommonResult>
+using Repositories;
+using Domain.Results;
+using FluentValidation;
+using AnnouncementNerdy.Domain.Entities.Announcement;
+
+
+public record GetSimilarAnnouncementsQuery(string Id) : IRequest<CommonResult<IEnumerable<Announcement>>>;
+
+public class GetSimilarAnnouncementsQueryHandler : IRequestHandler<GetSimilarAnnouncementsQuery, CommonResult<IEnumerable<Announcement>>>
 {
     private readonly IAnnouncementRepository _announcementRepository;
 
@@ -15,13 +18,13 @@ public class GetSimilarAnnouncementsQueryHandler : IRequestHandler<GetSimilarAnn
         _announcementRepository = announcementRepository;
     }
     
-    public async Task<CommonResult> Handle(GetSimilarAnnouncementsQuery request, CancellationToken cancellationToken)
+    public async Task<CommonResult<IEnumerable<Announcement>>> Handle(GetSimilarAnnouncementsQuery request, CancellationToken cancellationToken)
     {
         var announcement = await _announcementRepository.GetSimilar(request.Id);
 
         if (!announcement.Any())
         {
-            return Failure("There is not simmilar announcements");
+            return Failure<IEnumerable<Announcement>>("There is not simmilar announcements");
         }
 
         return Success(announcement);
