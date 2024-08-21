@@ -1,8 +1,9 @@
+using AnnouncementNerdy.Domain.Entities.Announcement;
+
 namespace AnnouncementNerdy.Infrastructure;
 
 
 using Microsoft.Extensions.Configuration;
-using TestAssignment.Domain.Entities.Announcement;
 using Elasticsearch.Net;
 using Microsoft.Extensions.DependencyInjection;
 using Nest;

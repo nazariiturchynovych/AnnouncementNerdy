@@ -1,6 +1,6 @@
-using TestAssignment.Domain.Results.Abstract;
+using AnnouncementNerdy.Domain.Results.Abstract;
 
-namespace TestAssignment.Domain.Results;
+namespace AnnouncementNerdy.Domain.Results;
 
 public record CommonResult<TData> : CommonResult, ICommonResult<TData>
 {

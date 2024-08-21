@@ -1,6 +1,6 @@
-using TestAssignment.Domain.Results;
+using AnnouncementNerdy.Domain.Results;
 
-namespace TestAssignment.Domain.ResultFactory;
+namespace AnnouncementNerdy.Domain.ResultFactory;
 
 public static class ResultFactory
 {

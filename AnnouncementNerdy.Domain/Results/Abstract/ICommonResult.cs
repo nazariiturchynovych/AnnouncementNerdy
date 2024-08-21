@@ -1,4 +1,4 @@
-namespace TestAssignment.Domain.Results.Abstract;
+namespace AnnouncementNerdy.Domain.Results.Abstract;
 
 public interface ICommonResult
 {

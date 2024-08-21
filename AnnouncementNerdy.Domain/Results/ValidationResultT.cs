@@ -1,4 +1,4 @@
-namespace TestAssignment.Domain.Results;
+namespace AnnouncementNerdy.Domain.Results;
 
 public record CommonValidationResultTData<TData> : CommonResult<TData>
 {

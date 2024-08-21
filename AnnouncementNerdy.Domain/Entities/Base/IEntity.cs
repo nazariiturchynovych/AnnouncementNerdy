@@ -1,5 +1,5 @@
-namespace TestAssignment.Domain.Entities.Base;
+namespace AnnouncementNerdy.Domain.Entities.Base;
 
-public interface IEntity : IEntity<Guid>
+public interface IEntity : IEntity<string>
 {
 }

@@ -1,6 +1,6 @@
 using AnnouncementNerdy.Application.Repositories;
+using AnnouncementNerdy.Domain.Entities.Announcement;
 using Nest;
-using TestAssignment.Domain.Entities.Announcement;
 
 namespace AnnouncementNerdy.Infrastructure.Repositories;
 

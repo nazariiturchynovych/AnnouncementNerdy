@@ -1,6 +1,6 @@
-namespace AnnouncementNerdy.Application.Repositories;
+using AnnouncementNerdy.Domain.Entities.Announcement;
 
-using TestAssignment.Domain.Entities.Announcement;
+namespace AnnouncementNerdy.Application.Repositories;
 
 public interface IAnnouncementRepository
 {
