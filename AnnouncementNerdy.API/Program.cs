@@ -1,8 +1,26 @@
+using System.Text.Json;
 using AnnouncementNerdy.Application;
 using AnnouncementNerdy.Infrastructure;
+using Serilog;
+using Serilog.Events;
+
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console(
+        outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{level:u3}] {Message:lj}{NewLine}{Exception}",
+        restrictedToMinimumLevel: LogEventLevel.Information)
+    .CreateBootstrapLogger();
+
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Host.UseSerilog(
+    (hb, lc) => lc
+        .WriteTo.Console()
+        .MinimumLevel.Information()
+        .ReadFrom.Configuration(hb.Configuration));
+
+Log.Fatal(JsonSerializer.Serialize(builder.Configuration));
 // Add services to the container.
 
 builder.Services.AddControllers();
