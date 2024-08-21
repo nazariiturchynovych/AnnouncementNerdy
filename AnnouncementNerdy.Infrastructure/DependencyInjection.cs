@@ -25,8 +25,8 @@ public static class DependencyInjection
         var settings = new ConnectionSettings(new Uri("https://localhost:9200"))
             .BasicAuthentication(credentials["user"], credentials["pass"])
             .ServerCertificateValidationCallback(CertificateValidations.AllowAll)
-            .DefaultIndex("announcements")
-            .DefaultMappingFor<Announcement>(x => x.IndexName("announcements").IdProperty(x => x.Id));
+            .DefaultIndex("announcement")
+            .DefaultMappingFor<Announcement>(x => x.IndexName("announcement").IdProperty(x => x.Id));
 
         var client = new ElasticClient(settings);
 

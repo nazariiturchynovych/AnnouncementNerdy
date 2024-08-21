@@ -1,5 +1,6 @@
 using AnnouncementNerdy.Application.Requests.Commands.Announcement;
 using AnnouncementNerdy.Application.Requests.Queries.Announcement;
+using AnnouncementNerdy.Domain.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -50,8 +51,8 @@ public class AnnouncementsController : ControllerBase
 
     // GET: api/announcements/similar
     [HttpGet("similar/{id}")]
-    public async Task<IActionResult> GetSimilarAnnouncements(string id)
+    public async Task<IActionResult> GetSimilarAnnouncements(string id, OrderBy orderBy)
     {
-        return Ok(await _mediator.Send(new GetSimilarAnnouncementsQuery(id)));
+        return Ok(await _mediator.Send(new GetSimilarAnnouncementsQuery(id, orderBy)));
     }
 }

@@ -1,15 +1,17 @@
-namespace AnnouncementNerdy.Application.Requests.Queries.Announcement;
+using AnnouncementNerdy.Domain.Enums;
 
+namespace AnnouncementNerdy.Application.Requests.Queries.Announcement;
 
 using Repositories;
 using Domain.Results;
 using FluentValidation;
 using AnnouncementNerdy.Domain.Entities.Announcement;
 
+public record GetSimilarAnnouncementsQuery(string Id, OrderBy OrderBy) : IRequest<CommonResult<IOrderedEnumerable<Announcement>>>;
 
-public record GetSimilarAnnouncementsQuery(string Id) : IRequest<CommonResult<IEnumerable<Announcement>>>;
-
-public class GetSimilarAnnouncementsQueryHandler : IRequestHandler<GetSimilarAnnouncementsQuery, CommonResult<IEnumerable<Announcement>>>
+public class
+    GetSimilarAnnouncementsQueryHandler : IRequestHandler<GetSimilarAnnouncementsQuery,
+    CommonResult<IOrderedEnumerable<Announcement>>>
 {
     private readonly IAnnouncementRepository _announcementRepository;
 
@@ -17,17 +19,26 @@ public class GetSimilarAnnouncementsQueryHandler : IRequestHandler<GetSimilarAnn
     {
         _announcementRepository = announcementRepository;
     }
-    
-    public async Task<CommonResult<IEnumerable<Announcement>>> Handle(GetSimilarAnnouncementsQuery request, CancellationToken cancellationToken)
+
+    public async Task<CommonResult<IOrderedEnumerable<Announcement>>> Handle(GetSimilarAnnouncementsQuery request,
+        CancellationToken cancellationToken)
     {
-        var announcement = await _announcementRepository.GetSimilar(request.Id);
+        var announcements = await _announcementRepository.GetSimilar(request.Id);
 
-        if (!announcement.Any())
+        if (!announcements.Any())
         {
-            return Failure<IEnumerable<Announcement>>("There is not simmilar announcements");
+            return Failure<IOrderedEnumerable<Announcement>>("There is not simmilar announcements");
         }
+        
 
-        return Success(announcement);
+        var orderedAnnouncements = request.OrderBy switch
+        {
+            OrderBy.Ascending => announcements.OrderBy(x => x.CreatedDate),
+            OrderBy.Descending => announcements.OrderByDescending(x => x.CreatedDate)
+        };
+        
+
+        return Success(orderedAnnouncements!);
     }
 }
 

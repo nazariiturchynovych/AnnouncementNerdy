@@ -55,7 +55,7 @@ public class AnnouncementRepository : IAnnouncementRepository
 
     public async Task<string> AddAsync(Announcement announcement)
     {
-        var indexName = nameof(Announcement).ToLower() + "s";
+        var indexName = nameof(Announcement).ToLower();
         var indexResponse = await _elasticClient.Indices.ExistsAsync(indexName);
 
         if (!indexResponse.Exists)
