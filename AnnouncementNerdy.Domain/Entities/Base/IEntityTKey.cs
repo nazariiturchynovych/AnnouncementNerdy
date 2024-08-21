@@ -1,4 +1,4 @@
-namespace TestAssignment.Domain.Entities.Base;
+namespace AnnouncementNerdy.Domain.Entities.Base;
 
 public interface IEntity<TKey>
 {

@@ -1,6 +1,6 @@
-using TestAssignment.Domain.Entities.Base;
+using AnnouncementNerdy.Domain.Entities.Base;
 
-namespace TestAssignment.Domain.Entities.Announcement;
+namespace AnnouncementNerdy.Domain.Entities.Announcement;
 
 public class Announcement : Entity
 {

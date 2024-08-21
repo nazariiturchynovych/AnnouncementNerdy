@@ -1,6 +1,6 @@
-namespace TestAssignment.Domain.Entities.Base;
+namespace AnnouncementNerdy.Domain.Entities.Base;
 
 public abstract class Entity : IEntity
 {
-    public Guid Id { get; set; }
+    public string Id { get; set; }
 }
