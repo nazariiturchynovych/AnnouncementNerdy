@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  announcement:
+    build:
+      context: "/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy"
+      dockerfile: "AnnouncementNerdy.API/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/AnnouncementNerdy.API.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "announcementapi:dev"
+    ports: []
+    volumes:
+    - "/Users/nazariiturchynovych/.nuget/packages:/home/app/.nuget/packages"
+    - "/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API:/app:rw"
+    - "/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy:/src:rw"
+    working_dir: "/app"

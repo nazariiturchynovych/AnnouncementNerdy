@@ -1,6 +1,0 @@
-@AnnouncementNerdy_HostAddress = http://localhost:5190
-
-GET {{AnnouncementNerdy_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

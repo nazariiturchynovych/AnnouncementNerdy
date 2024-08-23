@@ -1,0 +1,204 @@
+2024-08-21 18:17:11.928 +00:00 [] Now listening on: http://[::]:8080
+2024-08-21 18:17:11.968 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-21 18:17:11.970 +00:00 [] Hosting environment: Production
+2024-08-21 18:17:11.972 +00:00 [] Content root path: /app
+2024-08-21 18:18:24.772 +00:00 [] Failed to determine the https port for redirect.
+2024-08-21 18:18:25.942 +00:00 [] its index respones - Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+2024-08-21 18:18:26.138 +00:00 [] Serialization and deserialization of 'System.IntPtr' instances is not supported. Path: $.ApiCall.ConnectionConfiguration.BootstrapLock.AvailableWaitHandle.Handle.
+2024-08-21 18:18:26.139 +00:00 [] In catch block
+2024-08-21 18:18:26.150 +00:00 [] Connection id "0HN621MIF83Q2", Request id "0HN621MIF83Q2:00000001": An unhandled exception was thrown by the application.
+System.NotSupportedException: Serialization and deserialization of 'System.IntPtr' instances is not supported. Path: $.ApiCall.ConnectionConfiguration.BootstrapLock.AvailableWaitHandle.Handle.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.IntPtr' instances is not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Serialize(Utf8JsonWriter writer, T& rootValue, Object rootValueBoxed)
+   at System.Text.Json.JsonSerializer.WriteString[TValue](TValue& value, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](TValue value, JsonSerializerOptions options)
+   at AnnouncementNerdy.Infrastructure.Repositories.AnnouncementRepository.AddAsync(Announcement announcement) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Infrastructure/Repositories/AnnouncementRepository.cs:line 75
+   at AnnouncementNerdy.Application.Requests.Commands.Announcement.CreateAnnouncementCommandHandler.Handle(CreateAnnouncementCommand request, CancellationToken cancellationToken) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/Requests/Commands/Announcement/CreateAnnouncementCommand.cs:line 22
+   at AnnouncementNerdy.Application.Behaviours.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/Behaviours/ValidationBehaviour.cs:line 40
+   at AnnouncementNerdy.Controllers.AnnouncementsController.CreateAnnouncement(CreateAnnouncementCommand command) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API/Controllers/AnnouncementController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2024-08-21 18:19:16.296 +00:00 [] Application is shutting down...
+2024-08-21 18:20:11.105 +00:00 [] Now listening on: http://[::]:8080
+2024-08-21 18:20:11.124 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-21 18:20:11.125 +00:00 [] Hosting environment: Production
+2024-08-21 18:20:11.125 +00:00 [] Content root path: /app
+2024-08-21 18:20:30.771 +00:00 [] Failed to determine the https port for redirect.
+2024-08-21 18:20:31.458 +00:00 [] its index respones - Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+2024-08-21 18:20:31.489 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 18:21:53.816 +00:00 [] Application is shutting down...
+2024-08-21 18:23:16.798 +00:00 [] Now listening on: http://[::]:8080
+2024-08-21 18:23:16.823 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-21 18:23:16.824 +00:00 [] Hosting environment: Production
+2024-08-21 18:23:16.827 +00:00 [] Content root path: /app
+2024-08-21 18:23:17.752 +00:00 [] Failed to determine the https port for redirect.
+2024-08-21 18:23:18.077 +00:00 [] its index name -announcement
+2024-08-21 18:23:18.082 +00:00 [] its index respones - False
+2024-08-21 18:23:18.106 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 18:23:20.205 +00:00 [] its index name -announcement
+2024-08-21 18:23:20.207 +00:00 [] its index respones - False
+2024-08-21 18:23:20.227 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 18:23:21.621 +00:00 [] its index name -announcement
+2024-08-21 18:23:21.624 +00:00 [] its index respones - False
+2024-08-21 18:23:21.630 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 18:23:22.357 +00:00 [] its index name -announcement
+2024-08-21 18:23:22.358 +00:00 [] its index respones - False
+2024-08-21 18:23:22.363 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 18:23:23.095 +00:00 [] its index name -announcement
+2024-08-21 18:23:23.097 +00:00 [] its index respones - False
+2024-08-21 18:23:23.100 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 18:23:23.816 +00:00 [] its index name -announcement
+2024-08-21 18:23:23.817 +00:00 [] its index respones - False
+2024-08-21 18:23:23.820 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 18:23:24.497 +00:00 [] its index name -announcement
+2024-08-21 18:23:24.507 +00:00 [] its index respones - False
+2024-08-21 18:23:24.528 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 18:25:10.040 +00:00 [] Application is shutting down...
+2024-08-21 18:26:17.962 +00:00 [] Now listening on: http://[::]:8080
+2024-08-21 18:26:17.986 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-21 18:26:17.989 +00:00 [] Hosting environment: Production
+2024-08-21 18:26:17.990 +00:00 [] Content root path: /app
+2024-08-21 18:28:28.631 +00:00 [] Failed to determine the https port for redirect.
+2024-08-21 18:28:28.946 +00:00 [] its index name -announcement
+2024-08-21 18:28:28.947 +00:00 [] its index name -Microsoft.Extensions.Configuration.ConfigurationSection
+2024-08-21 18:28:28.948 +00:00 [] its index respones - False
+2024-08-21 18:28:29.079 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 18:36:26.534 +00:00 [] Application is shutting down...
+2024-08-21 21:39:21.650 +03:00 [] Now listening on: https://localhost:7066
+2024-08-21 21:39:21.673 +03:00 [] Now listening on: http://localhost:5190
+2024-08-21 21:39:21.674 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-21 21:39:21.675 +03:00 [] Hosting environment: Development
+2024-08-21 21:39:21.675 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-21 21:40:04.598 +03:00 [] its index name -announcement
+2024-08-21 21:40:04.615 +03:00 [] its index name -Microsoft.Extensions.Configuration.ConfigurationSection
+2024-08-21 21:40:04.616 +03:00 [] its index respones - False
+2024-08-21 21:40:04.898 +03:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 21:49:31.477 +03:00 [] Now listening on: http://localhost:5190
+2024-08-21 21:49:31.492 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-21 21:49:31.493 +03:00 [] Hosting environment: Development
+2024-08-21 21:49:31.493 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-21 21:49:38.402 +03:00 [] Application is shutting down...
+2024-08-21 21:49:50.785 +03:00 [] Now listening on: http://localhost:5190
+2024-08-21 21:49:50.802 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-21 21:49:50.803 +03:00 [] Hosting environment: Development
+2024-08-21 21:49:50.803 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-21 21:50:08.810 +03:00 [] Failed to determine the https port for redirect.
+2024-08-21 21:50:34.393 +03:00 [] its index name -announcement
+2024-08-21 21:50:34.399 +03:00 [] its index name -Microsoft.Extensions.Configuration.ConfigurationSection
+2024-08-21 21:50:34.401 +03:00 [] its index respones - False
+2024-08-21 21:50:35.053 +03:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 21:54:21.449 +03:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 22:26:15.264 +03:00 [] Now listening on: http://localhost:5190
+2024-08-21 22:26:15.278 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-21 22:26:15.278 +03:00 [] Hosting environment: Development
+2024-08-21 22:26:15.278 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-21 22:26:23.262 +03:00 [] Failed to determine the https port for redirect.
+2024-08-21 22:26:31.691 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-21 22:28:07.571 +03:00 [] Application is shutting down...
+2024-08-21 19:28:30.050 +00:00 [] Now listening on: http://[::]:8080
+2024-08-21 19:28:30.096 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-21 19:28:30.096 +00:00 [] Hosting environment: Production
+2024-08-21 19:28:30.097 +00:00 [] Content root path: /app
+2024-08-21 19:28:43.873 +00:00 [] Failed to determine the https port for redirect.
+2024-08-21 19:28:44.690 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 19:28:48.111 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 19:28:49.855 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 19:28:50.917 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 19:29:44.930 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 19:30:00.465 +00:00 [] Application is shutting down...
+ing environment: Development
+2024-08-21 22:29:05.356 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-21 22:29:12.068 +03:00 [] Failed to determine the https port for redirect.
+2024-08-21 22:29:25.474 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-21 22:30:30.463 +03:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 22:30:33.419 +03:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 22:30:34.2024-08-21 19:31:32.391 +00:00 [] Failed to determine the https port for redirect.
+2024-08-21 19:31:36.346 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 19:33:03.498 +00:00 [] Application is shutting down...
+ NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 22:30:36.992 +03:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 22:30:40.772 +03:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 22:30:41.388 +03:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 22:31:11.029 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-21 22:31:17.678 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-21 22:31:18.324 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-21 22:31:20.271 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-21 22:31:21.718 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-21 22:31:22.374 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-21 22:32:28.499 +03:00 [] Application is shutting down...
+2024-08-21 22:32:40.761 +03:00 [] Now listening on: http://localhost:5190
+2024-08-21 22:32:40.774 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-21 22:32:40.775 +03:00 [] Hosting environment: Development
+2024-08-21 22:32:40.775 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-21 22:32:49.837 +03:00 [] Failed to determine the https port for redirect.
+2024-08-21 22:32:56.625 +03:00 [] Application is shutting down...
+2024-08-21 19:33:28.612 +00:00 [] Now listening on: http://[::]:8080
+2024-08-21 19:33:28.651 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-21 19:33:28.652 +00:00 [] Hosting environment: Development
+2024-08-21 19:33:28.652 +00:00 [] Content root path: /app
+2024-08-21 19:34:50.976 +00:00 [] Failed to determine the https port for redirect.
+2024-08-21 19:34:51.442 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 19:37:46.589 +00:00 [] Application is shutting down...
+Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-21 22:34:24.997 +03:00 [] Failed to determine the https port for redirect.
+2024-08-21 22:34:36.949 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-21 22:34:40.165 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-21 22:34:40.901 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-21 19:38:08.772 +00:00 [] Now listening on: http://[::]:8080
+2024-08-21 19:38:08.792 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-21 19:38:08.792 +00:00 [] Hosting environment: Development
+2024-08-21 19:38:08.793 +00:00 [] Content root path: /app
+2024-08-21 19:39:21.349 +00:00 [] Failed to determine the https port for redirect.
+2024-08-21 19:39:32.383 +00:00 [] False
+2024-08-21 19:39:32.404 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 19:41:14.173 +00:00 [] Application is shutting down...
+2024-08-21 19:41:40.505 +00:00 [] Now listening on: http://[::]:8080
+2024-08-21 19:41:40.533 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-21 19:41:40.534 +00:00 [] Hosting environment: Development
+2024-08-21 19:41:40.534 +00:00 [] Content root path: /app
+2024-08-21 19:44:38.608 +00:00 [] Failed to determine the https port for redirect.
+2024-08-21 19:44:38.840 +00:00 [] False
+2024-08-21 19:44:38.859 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-21 22:45:02.579 +03:00 [] Now listening on: http://localhost:5190
+2024-08-21 22:45:02.593 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-21 22:45:02.593 +03:00 [] Hosting environment: Development
+2024-08-21 22:45:02.593 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-21 22:45:08.911 +03:00 [] Failed to determine the https port for redirect.
+2024-08-21 22:45:12.406 +03:00 [] False
+2024-08-21 22:45:15.670 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-21 22:45:18.266 +03:00 [] True
+2024-08-21 22:45:18.316 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-21 22:45:20.559 +03:00 [] True
+2024-08-21 22:45:20.592 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-21 22:50:11.199 +03:00 [] Application is shutting down...

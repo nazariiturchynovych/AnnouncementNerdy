@@ -1,0 +1,12 @@
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Domain/bin/Debug/net8.0/AnnouncementNerdy.Domain.deps.json
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Domain/bin/Debug/net8.0/AnnouncementNerdy.Domain.dll
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Domain/bin/Debug/net8.0/AnnouncementNerdy.Domain.pdb
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Domain/obj/Debug/net8.0/AnnouncementNerdy.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Domain/obj/Debug/net8.0/AnnouncementNerdy.Domain.AssemblyInfoInputs.cache
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Domain/obj/Debug/net8.0/AnnouncementNerdy.Domain.AssemblyInfo.cs
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Domain/obj/Debug/net8.0/AnnouncementNerdy.Domain.csproj.CoreCompileInputs.cache
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Domain/obj/Debug/net8.0/AnnouncementNerdy.Domain.sourcelink.json
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Domain/obj/Debug/net8.0/AnnouncementNerdy.Domain.dll
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Domain/obj/Debug/net8.0/refint/AnnouncementNerdy.Domain.dll
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Domain/obj/Debug/net8.0/AnnouncementNerdy.Domain.pdb
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Domain/obj/Debug/net8.0/ref/AnnouncementNerdy.Domain.dll

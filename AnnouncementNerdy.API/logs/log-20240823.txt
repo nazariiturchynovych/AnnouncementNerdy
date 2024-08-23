@@ -1,0 +1,1410 @@
+2024-08-23 05:03:32.901 +00:00 [] Application is shutting down...
+2024-08-23 05:15:56.397 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 05:15:56.416 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 05:15:56.417 +00:00 [] Hosting environment: Development
+2024-08-23 05:15:56.418 +00:00 [] Content root path: /app
+2024-08-23 05:16:20.978 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 05:17:59.223 +00:00 [] Application is shutting down...
+2024-08-23 05:18:08.555 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 05:18:08.582 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 05:18:08.583 +00:00 [] Hosting environment: Development
+2024-08-23 05:18:08.583 +00:00 [] Content root path: /app
+2024-08-23 05:18:17.257 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 05:18:38.361 +00:00 [] Application is shutting down...
+2024-08-23 05:20:10.115 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 05:20:10.136 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 05:20:10.139 +00:00 [] Hosting environment: Development
+2024-08-23 05:20:10.140 +00:00 [] Content root path: /app
+2024-08-23 05:20:33.280 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 05:25:28.489 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 05:25:28.506 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 05:25:28.507 +00:00 [] Hosting environment: Development
+2024-08-23 05:25:28.507 +00:00 [] Content root path: /app
+2024-08-23 05:25:32.753 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 05:25:32.836 +00:00 [] Im in method
+2024-08-23 05:25:33.046 +00:00 [] Serialization and deserialization of 'System.IntPtr' instances is not supported. Path: $.ApiCall.ConnectionConfiguration.BootstrapLock.AvailableWaitHandle.Handle.
+2024-08-23 05:25:33.049 +00:00 [] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Serialization and deserialization of 'System.IntPtr' instances is not supported. Path: $.ApiCall.ConnectionConfiguration.BootstrapLock.AvailableWaitHandle.Handle.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.IntPtr' instances is not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Serialize(Utf8JsonWriter writer, T& rootValue, Object rootValueBoxed)
+   at System.Text.Json.JsonSerializer.WriteString[TValue](TValue& value, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](TValue value, JsonSerializerOptions options)
+   at AnnouncementNerdy.Infrastructure.Repositories.AnnouncementRepository.AddAsync(Announcement announcement) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Infrastructure/Repositories/AnnouncementRepository.cs:line 72
+   at AnnouncementNerdy.Application.Requests.Commands.Announcement.CreateAnnouncementCommandHandler.Handle(CreateAnnouncementCommand request, CancellationToken cancellationToken) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/Requests/Commands/Announcement/CreateAnnouncementCommand.cs:line 22
+   at AnnouncementNerdy.Application.Behaviours.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/Behaviours/ValidationBehaviour.cs:line 40
+   at AnnouncementNerdy.Controllers.AnnouncementsController.CreateAnnouncement(CreateAnnouncementCommand command) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API/Controllers/AnnouncementController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-23 05:28:38.303 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 05:28:38.319 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 05:28:38.319 +00:00 [] Hosting environment: Development
+2024-08-23 05:28:38.319 +00:00 [] Content root path: /app
+2024-08-23 05:28:48.822 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 05:28:48.898 +00:00 [] Im in method
+2024-08-23 05:28:49.037 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+2024-08-23 08:31:25.676 +03:00 [] Now listening on: http://localhost:5190
+2024-08-23 08:31:25.843 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 08:31:25.844 +03:00 [] Hosting environment: Development
+2024-08-23 08:31:25.844 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-23 08:31:37.813 +03:00 [] Failed to determine the https port for redirect.
+2024-08-23 08:31:37.922 +03:00 [] Im in method
+2024-08-23 08:32:07.432 +03:00 [] Invalid NEST response built from a successful (404) low level call on HEAD: /announcement
+2024-08-23 05:33:15.675 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 05:33:15.705 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 05:33:15.706 +00:00 [] Hosting environment: Development
+2024-08-23 05:33:15.706 +00:00 [] Content root path: /app
+2024-08-23 05:33:25.437 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 05:33:25.527 +00:00 [] Im in method
+2024-08-23 05:33:25.635 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+2024-08-23 05:33:25.650 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-23 08:33:52.622 +03:00 [] Now listening on: http://localhost:5190
+2024-08-23 08:33:52.636 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 08:33:52.637 +03:00 [] Hosting environment: Development
+2024-08-23 08:33:52.637 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-23 08:33:55.117 +03:00 [] Application is shutting down...
+2024-08-23 08:34:07.019 +03:00 [] Now listening on: http://localhost:5190
+2024-08-23 08:34:07.033 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 08:34:07.033 +03:00 [] Hosting environment: Development
+2024-08-23 08:34:07.033 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-23 08:34:36.953 +03:00 [] Failed to determine the https port for redirect.
+2024-08-23 08:34:37.072 +03:00 [] Im in method
+2024-08-23 08:34:37.624 +03:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+2024-08-23 08:34:37.847 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-23 08:34:43.194 +03:00 [] Im in method
+2024-08-23 08:34:43.496 +03:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+2024-08-23 08:37:52.716 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+2024-08-23 05:38:57.753 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 05:38:57.769 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 05:38:57.769 +00:00 [] Hosting environment: Development
+2024-08-23 05:38:57.769 +00:00 [] Content root path: /app
+2024-08-23 05:39:12.250 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 05:39:12.315 +00:00 [] Im in method
+2024-08-23 05:39:12.545 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+2024-08-23 05:39:12.576 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+2024-08-23 05:41:08.643 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 05:41:08.657 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 05:41:08.657 +00:00 [] Hosting environment: Development
+2024-08-23 05:41:08.657 +00:00 [] Content root path: /app
+2024-08-23 05:41:13.757 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 05:41:13.849 +00:00 [] Im in method
+2024-08-23 05:41:13.979 +00:00 [] Object reference not set to an instance of an object.
+2024-08-23 05:41:13.982 +00:00 [] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AnnouncementNerdy.Infrastructure.Repositories.AnnouncementRepository.AddAsync(Announcement announcement) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Infrastructure/Repositories/AnnouncementRepository.cs:line 80
+   at AnnouncementNerdy.Application.Requests.Commands.Announcement.CreateAnnouncementCommandHandler.Handle(CreateAnnouncementCommand request, CancellationToken cancellationToken) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/Requests/Commands/Announcement/CreateAnnouncementCommand.cs:line 22
+   at AnnouncementNerdy.Application.Behaviours.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/Behaviours/ValidationBehaviour.cs:line 40
+   at AnnouncementNerdy.Controllers.AnnouncementsController.CreateAnnouncement(CreateAnnouncementCommand command) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API/Controllers/AnnouncementController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-23 08:44:33.534 +03:00 [] Now listening on: http://localhost:5190
+2024-08-23 08:44:33.551 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 08:44:33.551 +03:00 [] Hosting environment: Development
+2024-08-23 08:44:33.551 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-23 08:44:37.678 +03:00 [] Failed to determine the https port for redirect.
+2024-08-23 08:44:37.709 +03:00 [] Im in method
+2024-08-23 08:44:38.332 +03:00 [] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Serialization and deserialization of 'System.IntPtr' instances is not supported. Path: $.ApiCall.ConnectionConfiguration.BootstrapLock.AvailableWaitHandle.Handle.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.IntPtr' instances is not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-23 08:44:56.235 +03:00 [] Im in method
+2024-08-23 05:45:37.776 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 05:45:37.798 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 05:45:37.799 +00:00 [] Hosting environment: Development
+2024-08-23 05:45:37.799 +00:00 [] Content root path: /app
+2024-08-23 05:45:41.891 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 05:45:41.915 +00:00 [] Im in method
+2024-08-23 05:48:51.326 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 05:48:51.342 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 05:48:51.342 +00:00 [] Hosting environment: Development
+2024-08-23 05:48:51.342 +00:00 [] Content root path: /app
+2024-08-23 05:48:53.386 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 05:48:53.423 +00:00 [] Im in method
+2024-08-23 05:54:31.408 +00:00 [] Application is shutting down...
+2024-08-23 05:54:49.328 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 05:54:49.346 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 05:54:49.347 +00:00 [] Hosting environment: Development
+2024-08-23 05:54:49.348 +00:00 [] Content root path: /app
+2024-08-23 05:54:55.412 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 05:54:55.439 +00:00 [] Im in method
+2024-08-23 05:54:59.395 +00:00 [] Im in method
+2024-08-23 05:55:00.293 +00:00 [] Im in method
+2024-08-23 05:55:01.333 +00:00 [] Im in method
+2024-08-23 06:02:52.762 +00:00 [] Application is shutting down...
+st:5190
+2024-08-23 08:55:36.406 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 08:55:36.406 +03:00 [] Hosting environment: Development
+2024-08-23 08:55:36.406 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-23 08:55:43.216 +03:00 [] Failed to determine the https port for redirect.
+2024-08-23 08:55:43.233 +03:00 [] Im in method
+2024-08-23 09:05:06.331 +03:00 [] Application is shutting down...
+80
+2024-08-23 06:03:10.204 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 06:03:10.205 +00:00 [] Hosting environment: Development
+2024-08-23 06:03:10.205 +00:00 [] Content root path: /app
+2024-08-23 06:03:28.856 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 06:03:28.895 +00:00 [] Im in method
+2024-08-23 06:03:30.728 +00:00 [] Im in method
+2024-08-23 06:03:48.473 +00:00 [] Im in method
+2024-08-23 06:04:31.101 +00:00 [] Application is shutting down...
+2024-08-23 06:05:57.759 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 06:05:57.996 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 06:05:57.998 +00:00 [] Hosting environment: Development
+2024-08-23 06:05:57.999 +00:00 [] Content root path: /app
+2024-08-23 06:06:24.303 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 06:06:24.375 +00:00 [] Im in method
+2024-08-23 06:06:24.702 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.2196131
+ - [2] ProductCheckFailure: Node: http://localhost:9200/ Took: 00:00:00.1827898
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: Connection refused (localhost:9200)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:06:24.736 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0009341
+ - [2] ProductCheckFailure: Node: http://localhost:9200/ Took: 00:00:00.0009143
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: Connection refused (localhost:9200)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:10:21.620 +00:00 [] Application is shutting down...
+2024-08-23 06:10:23.395 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 06:10:23.410 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 06:10:23.411 +00:00 [] Hosting environment: Development
+2024-08-23 06:10:23.411 +00:00 [] Content root path: /app
+2024-08-23 06:10:26.896 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 06:10:26.921 +00:00 [] Im in method
+2024-08-23 06:10:27.022 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0407117
+ - [2] ProductCheckFailure: Node: http://localhost:9200/ Took: 00:00:00.0342673
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: Connection refused (localhost:9200)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:10:27.041 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0011938
+ - [2] ProductCheckFailure: Node: http://localhost:9200/ Took: 00:00:00.0011734
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: Connection refused (localhost:9200)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:20:10.864 +00:00 [] Application is shutting down...
+2024-08-23 06:30:59.181 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 06:30:59.199 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 06:30:59.200 +00:00 [] Hosting environment: Development
+2024-08-23 06:30:59.200 +00:00 [] Content root path: /app
+2024-08-23 06:31:18.297 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 06:31:18.351 +00:00 [] Im in method
+2024-08-23 06:31:18.548 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0804054
+ - [2] ProductCheckFailure: Node: http://elasticsearch:9200/ Took: 00:00:00.0761105
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: Connection refused (elasticsearch:9200)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:31:18.569 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0016830
+ - [2] ProductCheckFailure: Node: http://elasticsearch:9200/ Took: 00:00:00.0016609
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: Connection refused (elasticsearch:9200)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:36:17.456 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 06:36:17.481 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 06:36:17.482 +00:00 [] Hosting environment: Development
+2024-08-23 06:36:17.483 +00:00 [] Content root path: /app
+2024-08-23 06:36:47.301 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 06:36:47.355 +00:00 [] Im in method
+2024-08-23 06:36:47.533 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0642241
+ - [2] ProductCheckFailure: Node: http://es01:9200/ Took: 00:00:00.0584556
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: Connection refused (es01:9200)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:36:47.571 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0021545
+ - [2] ProductCheckFailure: Node: http://es01:9200/ Took: 00:00:00.0021191
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: Connection refused (es01:9200)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:42:40.993 +00:00 [] Application is shutting down...
+st:5190
+2024-08-23 09:39:33.590 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 09:39:33.590 +03:00 [] Hosting environment: Development
+2024-08-23 09:39:33.590 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-23 09:39:40.296 +03:00 [] Failed to determine the https port for redirect.
+2024-08-23 09:39:43.392 +03:00 [] Im in method
+2024-08-23 09:40:19.139 +03:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.2609630
+ - [2] ProductCheckFailure: Node: http://es01:9200/ Took: 00:00:00.2522150
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (es01:9200)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 09:40:19.549 +03:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.1447460
+ - [2] ProductCheckFailure: Node: http://es01:9200/ Took: 00:00:00.1447210
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (es01:9200)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 09:40:32.678 +03:00 [] Im in method
+2024-08-23 09:41:02.433 +03:00 [] Invalid NEST response built from a successful (404) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:03.0847500
+ - [2] ProductCheckSuccess: Node: http://localhost:9200/ Took: 00:00:03.0846740
+ - [3] HealthyResponse: Node: http://localhost:9200/ Took: 00:00:00.0183510
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 09:41:03.480 +03:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: http://localhost:9200/ Took: 00:00:00.1185870
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:43:20.729 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 06:43:20.748 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 06:43:20.748 +00:00 [] Hosting environment: Development
+2024-08-23 06:43:20.748 +00:00 [] Content root path: /app
+2024-08-23 06:43:53.560 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 06:43:53.591 +00:00 [] Im in method
+2024-08-23 06:43:54.083 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.3655216
+ - [2] ProductCheckSuccess: Node: http://elastic:9200/ Took: 00:00:00.3472477
+ - [3] HealthyResponse: Node: http://elastic:9200/ Took: 00:00:00.0151438
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:43:54.222 +00:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: http://elastic:9200/ Took: 00:00:00.1349394
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:44:31.723 +00:00 [] Im in method
+2024-08-23 06:44:31.799 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0629790
+ - [2] ProductCheckSuccess: Node: http://elastic:9200/ Took: 00:00:00.0627081
+ - [3] HealthyResponse: Node: http://elastic:9200/ Took: 00:00:00.0052686
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:44:31.852 +00:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: http://elastic:9200/ Took: 00:00:00.0510348
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:44:32.612 +00:00 [] Im in method
+2024-08-23 06:44:32.635 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0176934
+ - [2] ProductCheckSuccess: Node: http://elastic:9200/ Took: 00:00:00.0176484
+ - [3] HealthyResponse: Node: http://elastic:9200/ Took: 00:00:00.0031521
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:44:32.656 +00:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: http://elastic:9200/ Took: 00:00:00.0196304
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:51:49.226 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 06:51:49.258 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 06:51:49.259 +00:00 [] Hosting environment: Development
+2024-08-23 06:51:49.260 +00:00 [] Content root path: /app
+2024-08-23 06:51:59.023 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 06:51:59.061 +00:00 [] Im in method
+2024-08-23 06:51:59.209 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0680965
+ - [2] ProductCheckFailure: Node: http://elastic:9200/ Took: 00:00:00.0633715
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: Connection refused (elastic:9200)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:51:59.264 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0052955
+ - [2] ProductCheckFailure: Node: http://elastic:9200/ Took: 00:00:00.0052389
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: Connection refused (elastic:9200)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:52:52.862 +00:00 [] Im in method
+2024-08-23 06:52:53.437 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.4998388
+ - [2] ProductCheckSuccess: Node: http://elastic:9200/ Took: 00:00:00.4996018
+ - [3] HealthyResponse: Node: http://elastic:9200/ Took: 00:00:00.0254482
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:52:53.579 +00:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: http://elastic:9200/ Took: 00:00:00.1406208
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:53:51.423 +00:00 [] Application is shutting down...
+2024-08-23 06:54:09.395 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 06:54:09.413 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 06:54:09.414 +00:00 [] Hosting environment: Development
+2024-08-23 06:54:09.414 +00:00 [] Content root path: /app
+2024-08-23 06:54:36.281 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 06:54:36.316 +00:00 [] Im in method
+2024-08-23 06:54:36.653 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.2684990
+ - [2] ProductCheckSuccess: Node: http://es1:9200/ Took: 00:00:00.2645612
+ - [3] HealthyResponse: Node: http://es1:9200/ Took: 00:00:00.0146036
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:54:36.741 +00:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: http://es1:9200/ Took: 00:00:00.0842965
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:54:42.218 +00:00 [] Im in method
+2024-08-23 06:54:42.288 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0536476
+ - [2] ProductCheckSuccess: Node: http://es1:9200/ Took: 00:00:00.0534174
+ - [3] HealthyResponse: Node: http://es1:9200/ Took: 00:00:00.0057301
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:54:42.315 +00:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: http://es1:9200/ Took: 00:00:00.0253571
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:54:43.375 +00:00 [] Im in method
+2024-08-23 06:54:43.411 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0237759
+ - [2] ProductCheckSuccess: Node: http://es1:9200/ Took: 00:00:00.0237172
+ - [3] HealthyResponse: Node: http://es1:9200/ Took: 00:00:00.0046496
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:54:43.432 +00:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: http://es1:9200/ Took: 00:00:00.0203113
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:54:44.326 +00:00 [] Im in method
+2024-08-23 06:54:44.350 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0150887
+ - [2] ProductCheckSuccess: Node: http://es1:9200/ Took: 00:00:00.0150511
+ - [3] HealthyResponse: Node: http://es1:9200/ Took: 00:00:00.0025205
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:54:44.363 +00:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: http://es1:9200/ Took: 00:00:00.0118568
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:54:45.090 +00:00 [] Im in method
+2024-08-23 06:54:45.121 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0227028
+ - [2] ProductCheckSuccess: Node: http://es1:9200/ Took: 00:00:00.0226711
+ - [3] HealthyResponse: Node: http://es1:9200/ Took: 00:00:00.0022907
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:54:45.134 +00:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: http://es1:9200/ Took: 00:00:00.0115244
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:54:46.170 +00:00 [] Im in method
+2024-08-23 06:54:46.210 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0281500
+ - [2] ProductCheckSuccess: Node: http://es1:9200/ Took: 00:00:00.0280732
+ - [3] HealthyResponse: Node: http://es1:9200/ Took: 00:00:00.0034932
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 06:54:46.230 +00:00 [] Valid NEST response built from a successful (201) low level call on POST: /announcement/_doc
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: http://es1:9200/ Took: 00:00:00.0188898
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 07:11:37.171 +00:00 [] Application is shutting down...
+2024-08-23 07:11:52.316 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 07:11:52.337 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 07:11:52.337 +00:00 [] Hosting environment: Development
+2024-08-23 07:11:52.337 +00:00 [] Content root path: /app
+2024-08-23 07:11:59.506 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 07:13:11.799 +00:00 [] Application is shutting down...
+2024-08-23 07:13:33.581 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 07:13:33.611 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 07:13:33.612 +00:00 [] Hosting environment: Development
+2024-08-23 07:13:33.613 +00:00 [] Content root path: /app
+2024-08-23 07:14:04.605 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 07:14:05.118 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.3883313
+ - [2] ProductCheckSuccess: Node: http://elastic:9200/ Took: 00:00:00.3838650
+ - [3] HealthyResponse: Node: http://elastic:9200/ Took: 00:00:00.0133716
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 07:14:20.135 +00:00 [] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AnnouncementNerdy.Infrastructure.Repositories.AnnouncementRepository.GetByIdAsync(String id) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Infrastructure/Repositories/AnnouncementRepository.cs:line 26
+   at AnnouncementNerdy.Application.Requests.Queries.Announcement.GetByIdAnnouncementQueryHandler.Handle(GetByIdAnnouncementQuery request, CancellationToken cancellationToken) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/Requests/Queries/Announcement/GetByIdAnnouncementQuery.cs:line 21
+   at AnnouncementNerdy.Application.Behaviours.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/Behaviours/ValidationBehaviour.cs:line 40
+   at AnnouncementNerdy.Controllers.AnnouncementsController.GetById(String id) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API/Controllers/AnnouncementController.cs:line 43
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-23 07:16:23.258 +00:00 [] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AnnouncementNerdy.Infrastructure.Repositories.AnnouncementRepository.GetByIdAsync(String id) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Infrastructure/Repositories/AnnouncementRepository.cs:line 26
+   at AnnouncementNerdy.Application.Requests.Queries.Announcement.GetByIdAnnouncementQueryHandler.Handle(GetByIdAnnouncementQuery request, CancellationToken cancellationToken) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/Requests/Queries/Announcement/GetByIdAnnouncementQuery.cs:line 21
+   at AnnouncementNerdy.Application.Behaviours.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/Behaviours/ValidationBehaviour.cs:line 40
+   at AnnouncementNerdy.Controllers.AnnouncementsController.GetById(String id) in /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API/Controllers/AnnouncementController.cs:line 43
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-23 07:16:45.767 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: http://elastic:9200/ Took: 00:00:00.0356821
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 08:05:56.711 +00:00 [] Application is shutting down...
+st:5190
+2024-08-23 10:17:21.828 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 10:17:21.828 +03:00 [] Hosting environment: Development
+2024-08-23 10:17:21.828 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-23 10:17:32.125 +03:00 [] Failed to determine the https port for redirect.
+2024-08-23 10:18:19.938 +03:00 [] Application is shutting down...
+2024-08-23 08:06:40.056 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 08:06:40.106 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 08:06:40.107 +00:00 [] Hosting environment: Development
+2024-08-23 08:06:40.107 +00:00 [] Content root path: /app
+2024-08-23 08:09:30.154 +00:00 [] Application is shutting down...
+2024-08-23 08:09:30.457 +00:00 [] shut down complete
+2024-08-23 08:10:13.262 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 08:10:13.321 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 08:10:13.322 +00:00 [] Hosting environment: Development
+2024-08-23 08:10:13.323 +00:00 [] Content root path: /app
+2024-08-23 08:22:20.067 +00:00 [] Application is shutting down...
+2024-08-23 08:22:20.273 +00:00 [] shut down complete
+2024-08-23 08:23:34.436 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 08:23:34.477 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 08:23:34.478 +00:00 [] Hosting environment: Development
+2024-08-23 08:23:34.478 +00:00 [] Content root path: /app
+2024-08-23 08:27:04.815 +00:00 [] Application is shutting down...
+2024-08-23 08:27:05.037 +00:00 [] shut down complete
+2024-08-23 08:27:28.109 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 08:27:28.158 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 08:27:28.159 +00:00 [] Hosting environment: Development
+2024-08-23 08:27:28.160 +00:00 [] Content root path: /app
+2024-08-23 08:33:54.643 +00:00 [] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No service for type 'AnnouncementNerdy.Middlewares.GlobalExceptionHandlingMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-23 08:35:14.549 +00:00 [] Application is shutting down...
+2024-08-23 08:35:15.307 +00:00 [] shut down complete
+2024-08-23 08:35:53.908 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 08:35:53.977 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 08:35:53.978 +00:00 [] Hosting environment: Development
+2024-08-23 08:35:53.978 +00:00 [] Content root path: /app
+2024-08-23 08:37:19.155 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 08:41:30.604 +00:00 [] Application is shutting down...
+2024-08-23 08:41:30.672 +00:00 [] shut down complete
+2024-08-23 08:41:54.287 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 08:41:54.341 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 08:41:54.343 +00:00 [] Hosting environment: Development
+2024-08-23 08:41:54.344 +00:00 [] Content root path: /app
+2024-08-23 08:42:58.208 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 08:42:58.563 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.1184538
+ - [2] ProductCheckFailure: Node: http://elastic:9200/ Took: 00:00:00.1118994
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 08:44:09.191 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.0496679
+ - [2] ProductCheckFailure: Node: http://elastic:9200/ Took: 00:00:00.0486983
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: Th2024-08-23 11:45:09.235 +03:00 [] Failed to determine the https port for redirect.
+2024-08-23 11:45:31.072 +03:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.6158970
+ - [2] ProductCheckFailure: Node: http://localhost:9200/ Took: 00:00:00.6011700
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 11:47:12.803 +03:00 [] Now listening on: http://localhost:5190
+2024-08-23 11:47:12.870 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 11:47:12.870 +03:00 [] Hosting environment: Development
+2024-08-23 11:47:12.870 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-23 11:47:19.390 +03:00 [] Failed to determine the https port for redirect.
+2024-08-23 11:47:51.613 +03:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:02.9650340
+ - [2] ProductCheckFailure: Node: https://localhost:9200/ Took: 00:00:02.9240650
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors
+   at System.Net.Security.SslStream.SendAuthResetSignal(ReadOnlySpan`1 alert, ExceptionDispatchInfo exception)
+   at System.Net.Security.SslStream.CompleteHandshake(SslAuthenticationOptions sslAuthenticationOptions)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 11:48:11.312 +03:00 [] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5190: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (48): Address already in use
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-08-23 11:48:11.417 +03:00 [] Failed to bind to address http://127.0.0.1:5190: address already in use.
+2024-08-23 11:48:11.418 +03:00 [] shut down complete
+2024-08-23 11:48:52.482 +03:00 [] Now listening on: https://localhost:7066
+2024-08-23 11:48:52.518 +03:00 [] Now listening on: http://localhost:5190
+2024-08-23 11:48:52.519 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 11:48:52.520 +03:00 [] Hosting environment: Development
+2024-08-23 11:48:52.520 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-23 11:54:07.760 +03:00 [] Now listening on: https://localhost:7066
+2024-08-23 11:54:07.817 +03:00 [] Now listening on: http://localhost:5190
+2024-08-23 11:54:07.820 +03:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 11:54:07.820 +03:00 [] Hosting environment: Development
+2024-08-23 11:54:07.820 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-23 11:54:46.707 +03:00 [] Invalid NEST response built from a successful (404) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.4497940
+ - [2] ProductCheckSuccess: Node: https://localhost:9200/ Took: 00:00:00.4376920
+ - [3] HealthyResponse: Node: https://localhost:9200/ Took: 00:00:00.0197950
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 08:55:36.512 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 08:55:36.640 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 08:55:36.641 +00:00 [] Hosting environment: Development
+2024-08-23 08:55:36.642 +00:00 [] Content root path: /app
+2024-08-23 08:55:46.223 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 08:55:46.599 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.1223361
+ - [2] ProductCheckFailure: Node: http://elastic:9200/ Took: 00:00:00.1168826
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 08:56:37.130 +00:00 [] Application is shutting down...
+2024-08-23 08:56:37.386 +00:00 [] shut down complete
+ started. Press Ctrl+C to shut down.
+2024-08-23 11:56:07.162 +03:00 [] Hosting environment: Development
+2024-08-23 11:56:07.163 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-23 11:56:18.013 +03:00 [] Failed to determine the https port for redirect.
+2024-08-23 11:56:18.786 +03:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.4337430
+ - [2] ProductCheckSuccess: Node: https://localhost:9200/ Took: 00:00:00.4173860
+ - [3] HealthyResponse: Node: https://localhost:9200/ Took: 00:00:00.0286710
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 11:56:26.480 +03:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: https://localhost:9200/ Took: 00:00:00.0189090
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 11:56:32.686 +03:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: https://localhost:9200/ Took: 00:00:00.0305890
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 11:56:50.805 +03:00 [] Application is shutting down...
+2024-08-23 11:56:50.930 +03:00 [] shut down complete
+Async>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-08-23 11:56:20.618 +03:00 [] Failed to bind to address http://127.0.0.1:5190: address already in use.
+2024-08-23 11:56:20.620 +03:00 [] shut down complete
+2024-08-23 08:57:08.416 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 08:57:08.457 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 08:57:08.458 +00:00 [] Hosting environment: Development
+2024-08-23 08:57:08.458 +00:00 [] Content root path: /app
+2024-08-23 08:58:12.567 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 08:58:12.865 +00:00 [] Invalid NEST response built from a unsuccessful () low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.1139362
+ - [2] ProductCheckFailure: Node: http://elastic:9200/ Took: 00:00:00.1072595
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product. Call: Status code unknown from: GET /
+ ---> Elasticsearch.Net.PipelineException: The client is unable to verify that the server is Elasticsearch due to an unsuccessful product check call. Some functionality may not be compatible if the server is running an unsupported product.
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elasticsearch.Net.HttpConnection.RequestAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elasticsearch.Net.RequestPipeline.ThrowIfTransientProductCheckFailure()
+   at Elasticsearch.Net.RequestPipeline.PingAsync(Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.PingAsync(IRequestPipeline pipeline, Node node, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 09:00:21.447 +00:00 [] Application is shutting down...
+2024-08-23 09:00:21.770 +00:00 [] shut down complete
+ started. Press Ctrl+C to shut down.
+2024-08-23 11:59:39.829 +03:00 [] Hosting environment: Development
+2024-08-23 11:59:39.830 +03:00 [] Content root path: /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API
+2024-08-23 11:59:44.592 +03:00 [] Failed to determine the https port for redirect.
+2024-08-23 11:59:45.741 +03:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.9721650
+ - [2] ProductCheckSuccess: Node: https://localhost:9200/ Took: 00:00:00.9630560
+ - [3] HealthyResponse: Node: https://localhost:9200/ Took: 00:00:00.0511600
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 12:00:08.174 +03:00 [] Application is shutting down...
+2024-08-23 12:00:08.229 +03:00 [] shut down complete
+2024-08-23 09:00:55.585 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 09:00:55.752 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 09:00:55.758 +00:00 [] Hosting environment: Development
+2024-08-23 09:00:55.760 +00:00 [] Content root path: /app
+2024-08-23 09:02:57.403 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 09:02:59.591 +00:00 [] Invalid NEST response built from a unsuccessful (401) low level call on HEAD: /announcement
+# Warnings:
+- The client is unable to verify that the server is Elasticsearch due to security privileges on the server side. Some functionality may not be compatible if the server is running an unsupported product.
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:01.4061230
+ - [2] ProductCheckSuccess: Node: https://elastic:9200/ Took: 00:00:01.3978280
+ - [3] BadResponse: Node: https://elastic:9200/ Exception: PipelineException Took: 00:00:00.1011980
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: Could not authenticate with the specified node. Try verifying your credentials or check your Shield configuration. Call: Status code 401 from: HEAD /announcement
+ ---> Elasticsearch.Net.PipelineException: Could not authenticate with the specified node. Try verifying your credentials or check your Shield configuration.
+   at Elasticsearch.Net.RequestPipeline.ThrowBadAuthPipelineExceptionWhenNeeded(IApiCallDetails details, IElasticsearchResponse response)
+   at Elasticsearch.Net.RequestPipeline.PostCallElasticsearch[TResponse](RequestData requestData, TResponse response, Diagnostic`2 diagnostic, Auditable audit)
+   at Elasticsearch.Net.RequestPipeline.CallElasticsearchAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Audit exception in step 3 BadResponse:
+Elasticsearch.Net.PipelineException: Could not authenticate with the specified node. Try verifying your credentials or check your Shield configuration.
+   at Elasticsearch.Net.RequestPipeline.ThrowBadAuthPipelineExceptionWhenNeeded(IApiCallDetails details, IElasticsearchResponse response)
+   at Elasticsearch.Net.RequestPipeline.PostCallElasticsearch[TResponse](RequestData requestData, TResponse response, Diagnostic`2 diagnostic, Auditable audit)
+   at Elasticsearch.Net.RequestPipeline.CallElasticsearchAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 09:07:33.508 +00:00 [] Invalid NEST response built from a unsuccessful (401) low level call on HEAD: /announcement
+# Warnings:
+- The client is unable to verify that the server is Elasticsearch due to security privileges on the server side. Some functionality may not be compatible if the server is running an unsupported product.
+# Audit trail of this API call:
+ - [1] BadResponse: Node: https://elastic:9200/ Exception: PipelineException Took: 00:00:00.1998482
+# OriginalException: Elasticsearch.Net.ElasticsearchClientException: Could not authenticate with the specified node. Try verifying your credentials or check your Shield configuration. Call: Status code 401 from: HEAD /announcement
+ ---> Elasticsearch.Net.PipelineException: Could not authenticate with the specified node. Try verifying your credentials or check your Shield configuration.
+   at Elasticsearch.Net.RequestPipeline.ThrowBadAuthPipelineExceptionWhenNeeded(IApiCallDetails details, IElasticsearchResponse response)
+   at Elasticsearch.Net.RequestPipeline.PostCallElasticsearch[TResponse](RequestData requestData, TResponse response, Diagnostic`2 diagnostic, Auditable audit)
+2024-08-23 12:09:06.742 +03:00 [] Application is shutting down...
+2024-08-23 12:09:06.965 +03:00 [] shut down complete
+ncellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+   --- End of inner exception stack trace ---
+# Audit exception in step 1 BadResponse:
+Elasticsearch.Net.PipelineException: Could not authenticate with the specified node. Try verifying your credentials or check your Shield configuration.
+   at Elasticsearch.Net.RequestPipeline.ThrowBadAuthPipelineExceptionWhenNeeded(IApiCallDetails details, IElasticsearchResponse response)
+   at Elasticsearch.Net.RequestPipeline.PostCallElasticsearch[TResponse](RequestData requestData, TResponse response, Diagnostic`2 diagnostic, Auditable audit)
+   at Elasticsearch.Net.RequestPipeline.CallElasticsearchAsync[TResponse](RequestData requestData, CancellationToken cancellationToken)
+   at Elasticsearch.Net.Transport`1.RequestAsync[TResponse](HttpMethod method, String path, CancellationToken cancellationToken, PostData data, IRequestParameters requestParameters)
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 09:09:30.684 +00:00 [] Now listening on: http://[::]:8080
+2024-08-23 09:09:30.747 +00:00 [] Application started. Press Ctrl+C to shut down.
+2024-08-23 09:09:30.748 +00:00 [] Hosting environment: Development
+2024-08-23 09:09:30.748 +00:00 [] Content root path: /app
+2024-08-23 09:09:35.348 +00:00 [] Failed to determine the https port for redirect.
+2024-08-23 09:09:35.940 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] ProductCheckOnStartup: Took: 00:00:00.4195455
+ - [2] ProductCheckSuccess: Node: https://elastic:9200/ Took: 00:00:00.4139352
+ - [3] HealthyResponse: Node: https://elastic:9200/ Took: 00:00:00.0092241
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 09:09:40.847 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: https://elastic:9200/ Took: 00:00:00.0240956
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 09:09:42.192 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: https://elastic:9200/ Took: 00:00:00.0106322
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 09:09:43.028 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: https://elastic:9200/ Took: 00:00:00.0103672
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 09:09:43.808 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: https://elastic:9200/ Took: 00:00:00.0210468
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 09:09:44.722 +00:00 [] Valid NEST response built from a successful (200) low level call on HEAD: /announcement
+# Audit trail of this API call:
+ - [1] HealthyResponse: Node: https://elastic:9200/ Took: 00:00:00.0037882
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on ConnectionSettings to force it to be set on the response.>
+
+2024-08-23 09:27:34.948 +00:00 [] Application is shutting down...
+2024-08-23 09:27:36.557 +00:00 [] shut down complete

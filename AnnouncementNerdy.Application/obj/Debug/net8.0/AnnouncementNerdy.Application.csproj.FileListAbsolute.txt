@@ -1,0 +1,16 @@
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/bin/Debug/net8.0/AnnouncementNerdy.Application.deps.json
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/bin/Debug/net8.0/AnnouncementNerdy.Application.dll
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/bin/Debug/net8.0/AnnouncementNerdy.Application.pdb
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/bin/Debug/net8.0/AnnouncementNerdy.Domain.dll
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/bin/Debug/net8.0/AnnouncementNerdy.Domain.pdb
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/obj/Debug/net8.0/AnnouncementNerdy.Application.csproj.AssemblyReference.cache
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/obj/Debug/net8.0/AnnouncementNerdy.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/obj/Debug/net8.0/AnnouncementNerdy.Application.AssemblyInfoInputs.cache
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/obj/Debug/net8.0/AnnouncementNerdy.Application.AssemblyInfo.cs
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/obj/Debug/net8.0/AnnouncementNerdy.Application.csproj.CoreCompileInputs.cache
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/obj/Debug/net8.0/AnnouncementNerdy.Application.sourcelink.json
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/obj/Debug/net8.0/Announce.9D786D6E.Up2Date
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/obj/Debug/net8.0/AnnouncementNerdy.Application.dll
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/obj/Debug/net8.0/refint/AnnouncementNerdy.Application.dll
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/obj/Debug/net8.0/AnnouncementNerdy.Application.pdb
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.Application/obj/Debug/net8.0/ref/AnnouncementNerdy.Application.dll
