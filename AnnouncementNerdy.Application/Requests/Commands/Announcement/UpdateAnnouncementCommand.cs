@@ -1,6 +1,7 @@
 using AnnouncementNerdy.Application.Repositories;
 using AnnouncementNerdy.Domain.Results;
 using FluentValidation;
+using Microsoft.Extensions.Logging;
 
 namespace AnnouncementNerdy.Application.Requests.Commands.Announcement;
 
@@ -9,27 +10,37 @@ public record UpdateAnnouncementCommand(string Id, string Title, string Descript
 public class UpdateAnnouncementCommandHandler : IRequestHandler<UpdateAnnouncementCommand, CommonResult>
 {
     private readonly IAnnouncementRepository _announcementRepository;
+    private ILogger<UpdateAnnouncementCommandHandler> _logger;
 
-    public UpdateAnnouncementCommandHandler(IAnnouncementRepository announcementRepository)
+    public UpdateAnnouncementCommandHandler(IAnnouncementRepository announcementRepository, ILogger<UpdateAnnouncementCommandHandler> logger)
     {
         _announcementRepository = announcementRepository;
+        _logger = logger;
     }
     
     public async Task<CommonResult> Handle(UpdateAnnouncementCommand request, CancellationToken cancellationToken)
     {
-        var announcement = await _announcementRepository.GetByIdAsync(request.Id);
-
-        if (announcement is null)
+        try
         {
-            return Failure("Entity does not exist");
-        }
+            var announcement = await _announcementRepository.GetByIdAsync(request.Id);
 
-        announcement.Title = request.Title;
-        announcement.Description = request.Description;
+            if (announcement is null)
+            {
+                return Failure("Entity does not exist");
+            }
+
+            announcement.Title = request.Title;
+            announcement.Description = request.Description;
         
-        await _announcementRepository.UpdateAsync(announcement);
+            await _announcementRepository.UpdateAsync(announcement);
 
-        return Success();
+            return Success();
+        }
+        catch (Exception e)
+        {
+            _logger.LogError("Something went wrong in {@Command}, Error:{@Error}", nameof(UpdateAnnouncementCommand), e.Message);
+            throw;
+        }
     }
 }
 

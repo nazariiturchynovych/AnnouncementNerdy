@@ -5,17 +5,14 @@ using AnnouncementNerdy.Application.Repositories;
 using Domain.Entities.Announcement;
 using Helpers;
 using Nest;
-using Microsoft.Extensions.Logging;
 
 public class AnnouncementRepository : IAnnouncementRepository
 {
     private readonly IElasticClient _elasticClient;
-    private readonly ILogger<AnnouncementRepository> _logger;
 
-    public AnnouncementRepository(IElasticClient elasticClient, ILogger<AnnouncementRepository> logger)
+    public AnnouncementRepository(IElasticClient elasticClient)
     {
         _elasticClient = elasticClient;
-        _logger = logger;
     }
 
     public async Task<Announcement?> GetByIdAsync(string id) 
@@ -59,8 +56,7 @@ public class AnnouncementRepository : IAnnouncementRepository
 
     public async Task<string> AddAsync(Announcement announcement)
     {
-        try
-        {
+  
             var indexName = nameof(Announcement).ToLower();
             var indexResponse = await _elasticClient.Indices.ExistsAsync(indexName);
             
@@ -70,12 +66,7 @@ public class AnnouncementRepository : IAnnouncementRepository
             var response = await _elasticClient.IndexAsync<Announcement>(announcement, i => i.Index(indexName));
             
             return response.Id;
-        }
-        catch (Exception e)
-        {
-            _logger.LogCritical(e.Message);
-            throw;
-        }
+
     }
 
     public async Task<bool> UpdateAsync(Announcement announcement)
