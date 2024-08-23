@@ -1,6 +1,8 @@
 using AnnouncementNerdy.Application;
 using AnnouncementNerdy.Infrastructure;
 using AnnouncementNerdy.Middlewares;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Serilog;
 using Serilog.Events;
 
@@ -24,11 +26,16 @@ try
     
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
-
+    
+    builder.Services.AddHealthChecks()
+        .AddElasticsearch(builder.Configuration.GetSection("ElasticsearchSettings:uri").Value,"Elastic");
+    
     builder.Services
         .RegisterApplication()
         .RegisterInfrastructure(builder.Configuration);
 
+    builder.Services.AddTransient<GlobalExceptionHandlingMiddleware>();
+    
     //-------------------------------------------------//
     
     var app = builder.Build();
@@ -39,6 +46,8 @@ try
         app.UseSwaggerUI();
     }
 
+    app.MapHealthChecks("/_health", new HealthCheckOptions() {ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse});
+    
     app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
 
     app.UseHttpsRedirection();

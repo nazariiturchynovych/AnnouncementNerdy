@@ -25,6 +25,7 @@ public static class DependencyInjection
         var settings = new ConnectionSettings(new Uri(credentials["uri"]));
 
         settings = settings.BasicAuthentication(credentials["username"], credentials["password"])
+            .ServerCertificateValidationCallback(CertificateValidations.AllowAll)
             .DefaultIndex("announcement")
             .DefaultMappingFor<Announcement>(x => x.IndexName("announcement").IdProperty(x => x.Id));
             
