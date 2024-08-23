@@ -148,5 +148,17 @@ services:
       - ElasticsearchSettings__Password=${ELASTIC_PASSWORD}
     depends_on:
       - elastic
+      - seq
+    networks:
+      - esnetwork
+  
+  seq:
+    image: datalust/seq:latest
+    container_name: seq
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - 8020:80
+      - 5341:5341
     networks:
       - esnetwork

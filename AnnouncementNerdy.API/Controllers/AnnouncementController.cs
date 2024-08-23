@@ -16,9 +16,10 @@ public class AnnouncementsController : ControllerBase
     {
         _mediator = mediator;
     }
+    
 
     [HttpPost]
-    public async Task<IActionResult> CreateAnnouncement([FromBody] CreateAnnouncementCommand command)
+    public async Task<IActionResult> CreateAnnouncement([FromBody] CreateAnnouncementCommand command, ILogger<AnnouncementsController> logger)
     {
         return Ok(await _mediator.Send(command));
     }
@@ -29,19 +30,18 @@ public class AnnouncementsController : ControllerBase
         return Ok(await _mediator.Send(new DeleteAnnouncementCommand(id)));
     }
 
-    // PUT: api/announcements/{id}
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateAnnouncement(UpdateAnnouncementCommand command)
     {
         return Ok(await _mediator.Send(command));
     }
 
-    // GET: api/announcements/{id}
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(string id)
     {
         return Ok(await _mediator.Send(new GetAnnouncementByIdQuery(id)));
     }
+    
     
     [HttpGet("list")]
     public async Task<IActionResult> GetAnnouncementList()
@@ -49,7 +49,6 @@ public class AnnouncementsController : ControllerBase
         return Ok(await _mediator.Send(new GetAnnouncementListQuery()));
     }
 
-    // GET: api/announcements/similar
     [HttpGet("similar/{id}")]
     public async Task<IActionResult> GetSimilarAnnouncements(string id, OrderBy orderBy)
     {

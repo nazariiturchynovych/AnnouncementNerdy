@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnnouncementNerdy.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+efb9548a76adf0a613bbe1639e7718c8d788f0ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ce547216b34cdbc7d037df2c45f914c0c3da07f")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnnouncementNerdy.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnnouncementNerdy.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
