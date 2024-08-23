@@ -43,7 +43,7 @@ public class AnnouncementsController : ControllerBase
         return Ok(await _mediator.Send(new GetByIdAnnouncementQuery(id)));
     }
     
-    [HttpGet("/list")]
+    [HttpGet("list")]
     public async Task<IActionResult> GetAnnouncementList()
     {
         return Ok(await _mediator.Send(new GetAnnouncementListQuery()));
