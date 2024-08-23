@@ -1,9 +1,10 @@
-using AnnouncementNerdy.Application.Repositories;
-using AnnouncementNerdy.Domain.Entities.Announcement;
-using AnnouncementNerdy.Infrastructure.Helpers;
-using Nest;
-
 namespace AnnouncementNerdy.Infrastructure.Repositories;
+
+
+using AnnouncementNerdy.Application.Repositories;
+using Domain.Entities.Announcement;
+using Helpers;
+using Nest;
 
 public class AnnouncementRepository : IAnnouncementRepository
 {
@@ -55,14 +56,17 @@ public class AnnouncementRepository : IAnnouncementRepository
 
     public async Task<string> AddAsync(Announcement announcement)
     {
-        var indexName = nameof(Announcement).ToLower();
-        var indexResponse = await _elasticClient.Indices.ExistsAsync(indexName);
+  
+            var indexName = nameof(Announcement).ToLower();
+            var indexResponse = await _elasticClient.Indices.ExistsAsync(indexName);
+            
+            if (!indexResponse.Exists)
+                await _elasticClient.Indices.CreateAsync(indexName, i => i.Map<Announcement>(x => x.AutoMap()));
 
-        if (!indexResponse.Exists)
-            await _elasticClient.Indices.CreateAsync(indexName, i => i.Map<Announcement>(x => x.AutoMap()));
+            var response = await _elasticClient.IndexAsync<Announcement>(announcement, i => i.Index(indexName));
+            
+            return response.Id;
 
-        var response = await _elasticClient.IndexAsync<Announcement>(announcement, i => i.Index(indexName));
-        return response.Id;
     }
 
     public async Task<bool> UpdateAsync(Announcement announcement)

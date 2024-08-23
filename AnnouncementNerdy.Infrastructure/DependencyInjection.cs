@@ -21,13 +21,14 @@ public static class DependencyInjection
 
     public static IServiceCollection AddElasticSearch(this IServiceCollection services, IConfiguration configuration)
     {
-        var credentials = configuration.GetSection("Elastic");
-        var settings = new ConnectionSettings(new Uri("https://localhost:9200"))
-            .BasicAuthentication(credentials["user"], credentials["pass"])
+        var credentials = configuration.GetSection("ElasticsearchSettings");
+        var settings = new ConnectionSettings(new Uri(credentials["uri"]));
+
+        settings = settings.BasicAuthentication(credentials["username"], credentials["password"])
             .ServerCertificateValidationCallback(CertificateValidations.AllowAll)
             .DefaultIndex("announcement")
             .DefaultMappingFor<Announcement>(x => x.IndexName("announcement").IdProperty(x => x.Id));
-
+            
         var client = new ElasticClient(settings);
 
         services.AddSingleton<IElasticClient>(client);
