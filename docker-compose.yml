@@ -1,6 +1,46 @@
 services:
-  elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:${ELASTIC_VERSION}
+  elastic:
+    container_name: elastic
+    image: docker.elastic.co/elasticsearch/elasticsearch:${ELASTIC_STACK}
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
+      - ELASTICSEARCH_USERNAME=${ELASTIC_USER}
+      - ELASTICSEARCH_PASSWORD=${ELASTIC_PASSWORD}
+      - xpack.security.enabled=false
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - data01:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+    networks:
+      - esnetwork
+  
+  announcement:
+    image: "${DOCKER_REGISTRY-}announcementapi"
+    build:
+      context: .
+      dockerfile: AnnouncementNerdy.API/Dockerfile
+    ports:
+      - "6003:8080"
+      - "6063:8081"
+    environment:
+      - ElasticsearchSettings__Uri=${ELASTIC_URI}
+      - ElasticsearchSettings__Username=${ELASTIC_USER}
+      - ElasticsearchSettings__Password=$${ELASTIC_PASSWORD}
+    depends_on:
+      - elastic
+    networks:
+      - esnetwork
+
+volumes:
+  data01:
+    driver: local
 
 networks:
-  stack: {}
+  esnetwork:
+    driver: bridge

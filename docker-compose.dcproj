@@ -10,6 +10,8 @@
         <DockerServiceName>announcement.api</DockerServiceName>
     </PropertyGroup>
     <ItemGroup>
+        <None Include="docker-compose.yml" />
+        <None Include=".env" />
         <None Include=".dockerignore" />
     </ItemGroup>
 </Project>
