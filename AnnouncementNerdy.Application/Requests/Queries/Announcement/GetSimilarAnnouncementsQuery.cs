@@ -8,11 +8,11 @@ using Domain.Results;
 using FluentValidation;
 using AnnouncementNerdy.Domain.Entities.Announcement;
 
-public record GetSimilarAnnouncementsQuery(string Id, OrderBy OrderBy) : IRequest<CommonResult<IOrderedEnumerable<Announcement>>>;
+public record GetSimilarAnnouncementsQuery(string Id, OrderBy OrderBy) : IRequest<CommonResult<List<Announcement>>>;
 
 public class
     GetSimilarAnnouncementsQueryHandler : IRequestHandler<GetSimilarAnnouncementsQuery,
-    CommonResult<IOrderedEnumerable<Announcement>>>
+    CommonResult<List<Announcement>>>
 {
     private readonly IAnnouncementRepository _announcementRepository;
     private ILogger<GetSimilarAnnouncementsQueryHandler> _logger;
@@ -23,7 +23,7 @@ public class
         _logger = logger;
     }
 
-    public async Task<CommonResult<IOrderedEnumerable<Announcement>>> Handle(GetSimilarAnnouncementsQuery request,
+    public async Task<CommonResult<List<Announcement>>> Handle(GetSimilarAnnouncementsQuery request,
         CancellationToken cancellationToken)
     {
 
@@ -33,7 +33,7 @@ public class
 
             if (!announcements.Any())
             {
-                return Failure<IOrderedEnumerable<Announcement>>("There is not simmilar announcements");
+                return Failure<List<Announcement>>("There is not similar announcements");
             }
         
 
@@ -44,7 +44,7 @@ public class
             };
         
 
-            return Success(orderedAnnouncements!);
+            return Success(orderedAnnouncements.ToList()!);
         }
         catch (Exception e)
         {

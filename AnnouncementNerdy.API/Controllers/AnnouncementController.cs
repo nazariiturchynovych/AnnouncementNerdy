@@ -40,7 +40,7 @@ public class AnnouncementsController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(string id)
     {
-        return Ok(await _mediator.Send(new GetByIdAnnouncementQuery(id)));
+        return Ok(await _mediator.Send(new GetAnnouncementByIdQuery(id)));
     }
     
     [HttpGet("list")]

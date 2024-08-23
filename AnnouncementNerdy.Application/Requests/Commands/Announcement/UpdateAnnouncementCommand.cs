@@ -1,13 +1,14 @@
 using AnnouncementNerdy.Application.Repositories;
+using AnnouncementNerdy.Domain.Errors;
 using AnnouncementNerdy.Domain.Results;
 using FluentValidation;
 using Microsoft.Extensions.Logging;
 
 namespace AnnouncementNerdy.Application.Requests.Commands.Announcement;
 
-public record UpdateAnnouncementCommand(string Id, string Title, string Description) : IRequest<CommonResult>;
+public record UpdateAnnouncementCommand(string Id, string Title, string Description) : IRequest<CommonResult<bool>>;
 
-public class UpdateAnnouncementCommandHandler : IRequestHandler<UpdateAnnouncementCommand, CommonResult>
+public class UpdateAnnouncementCommandHandler : IRequestHandler<UpdateAnnouncementCommand, CommonResult<bool>>
 {
     private readonly IAnnouncementRepository _announcementRepository;
     private ILogger<UpdateAnnouncementCommandHandler> _logger;
@@ -18,7 +19,7 @@ public class UpdateAnnouncementCommandHandler : IRequestHandler<UpdateAnnounceme
         _logger = logger;
     }
     
-    public async Task<CommonResult> Handle(UpdateAnnouncementCommand request, CancellationToken cancellationToken)
+    public async Task<CommonResult<bool>> Handle(UpdateAnnouncementCommand request, CancellationToken cancellationToken)
     {
         try
         {
@@ -26,15 +27,15 @@ public class UpdateAnnouncementCommandHandler : IRequestHandler<UpdateAnnounceme
 
             if (announcement is null)
             {
-                return Failure("Entity does not exist");
+                return Failure<bool>(CommonErrors.EntityDoesNotExist);
             }
 
             announcement.Title = request.Title;
             announcement.Description = request.Description;
         
-            await _announcementRepository.UpdateAsync(announcement);
+           var result = await _announcementRepository.UpdateAsync(announcement);
 
-            return Success();
+            return Success(result);
         }
         catch (Exception e)
         {

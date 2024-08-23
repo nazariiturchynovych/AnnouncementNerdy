@@ -1,13 +1,14 @@
 using AnnouncementNerdy.Application.Repositories;
+using AnnouncementNerdy.Domain.Errors;
 using AnnouncementNerdy.Domain.Results;
 using FluentValidation;
 using Microsoft.Extensions.Logging;
 
 namespace AnnouncementNerdy.Application.Requests.Commands.Announcement;
 
-public record DeleteAnnouncementCommand(string Id) : IRequest<CommonResult>;
+public record DeleteAnnouncementCommand(string Id) : IRequest<CommonResult<bool>>;
 
-public class DeleteAnnouncementCommandHandler : IRequestHandler<DeleteAnnouncementCommand, CommonResult>
+public class DeleteAnnouncementCommandHandler : IRequestHandler<DeleteAnnouncementCommand, CommonResult<bool>>
 {
     private readonly IAnnouncementRepository _announcementRepository;
     private ILogger<DeleteAnnouncementCommandHandler> _logger;
@@ -19,7 +20,7 @@ public class DeleteAnnouncementCommandHandler : IRequestHandler<DeleteAnnounceme
         _logger = logger;
     }
 
-    public async Task<CommonResult> Handle(DeleteAnnouncementCommand request, CancellationToken cancellationToken)
+    public async Task<CommonResult<bool>> Handle(DeleteAnnouncementCommand request, CancellationToken cancellationToken)
     {
         try
         {
@@ -27,7 +28,7 @@ public class DeleteAnnouncementCommandHandler : IRequestHandler<DeleteAnnounceme
 
             if (announcement is null)
             {
-                return Failure("Entity does not exist");
+                return Failure<bool>(CommonErrors.EntityDoesNotExist);
             }
 
             var result = await _announcementRepository.DeleteAsync(announcement.Id);
