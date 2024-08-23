@@ -57,3 +57,8 @@
 /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API/bin/Debug/net8.0/HealthChecks.Elasticsearch.dll
 /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API/bin/Debug/net8.0/HealthChecks.UI.Client.dll
 /Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API/bin/Debug/net8.0/HealthChecks.UI.Core.dll
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API/bin/Debug/net8.0/Serilog.Enrichers.Environment.dll
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API/bin/Debug/net8.0/Serilog.Formatting.Elasticsearch.dll
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API/bin/Debug/net8.0/Serilog.Sinks.Elasticsearch.dll
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API/bin/Debug/net8.0/Serilog.Sinks.PeriodicBatching.dll
+/Users/nazariiturchynovych/RiderProjects/AnnouncementNerdy/AnnouncementNerdy.API/bin/Debug/net8.0/Serilog.Sinks.Seq.dll
